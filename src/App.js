@@ -1,17 +1,17 @@
 // import logo from './logo.svg';
 import React, { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 // import About from "./components/About";
 import TextForm from "./components/TextForm";
-import { 
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import { 
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 function App() {
@@ -50,25 +50,25 @@ function App() {
         {/* <Navbar title="TextUtils" aboutText="AboutUs"/> */}
         {/* <Navbar/> */}
 
-      <Router>
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+      {/* <Router> */}
+        <Navbar title="TextApp" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert}/>
         <div className="container my-3 ">
 
-          <Switch>
+          {/* <Switch> */}
             {/* /users --> component 1
             /users/home --> component 2 */}
             {/* Use exact with the path as react uses partial match so using exact solves the issue. */}
-            <Route exact path="/About">
-              <About />
-            </Route>
-            <Route path="/">
+            {/* <Route exact path="/About"> */}
+              {/* <About /> */}
+            {/* </Route> */}
+            {/* <Route path="/"> */}
             <TextForm showAlert={showAlert} heading="Enter the text to display" mode={mode}/> 
-            </Route>
-          </Switch>
+            {/* </Route> */}
+          {/* </Switch> */}
 
         </div>
-      </Router>    
+      {/* </Router>     */}
 
     </>
   );
